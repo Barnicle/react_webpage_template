@@ -1,11 +1,8 @@
+import React, { Component } from "react";
+// import "../styles/variables.scss";
 
-import React, { Component } from 'react';
-import Nav from '../nav';
-import '../styles/variables.scss';
 export default class App extends Component {
   render() {
-    return <div>
-      <Nav/>
-    </div>;
+    return <div className="app">APP</div>;
   }
 }

@@ -1,20 +1,25 @@
-$header-font : Gotham pro;
+$header-font: Gotham pro;
 $main-font: PT sarif;
-$bg_color: #2F2E2D;
-%headers{
+$bg_color: #2f2e2d;
+$btn_color: #c78555;
+%headers {
   font-family: $header-font;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   line-height: 60px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-%p-setup{
+%p-setup {
   font-family: $main-font;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+* {
+  margin: 0;
 }

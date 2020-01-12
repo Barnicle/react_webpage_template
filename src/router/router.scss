@@ -1,0 +1,25 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas: "NAV NAV  NAV" "file App MAP";
+}
+
+.link-1 {
+  grid-area: file;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  grid-area: NAV;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  grid-area: App;
+}
+.link-2 {
+  display: flex;
+  justify-content: center;
+  grid-area: MAP;
+}
