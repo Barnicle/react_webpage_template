@@ -42,6 +42,9 @@
 .link-2 {
   grid-area: MAP; }
 
+.appbar {
+  background: url(../item.png); }
+
 .link-map, .link-file {
   position: fixed;
   top: 50vh;
