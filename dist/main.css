@@ -1,0 +1,128 @@
+
+.app h2 {
+  font-family: Gotham pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase; }
+
+.app p {
+  font-family: PT sarif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px; }
+
+* {
+  margin: 0; }
+
+.app, .link-2 {
+  display: flex;
+  justify-content: center; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "NAV NAV  NAV" "file App MAP"; }
+
+.link-1 {
+  grid-area: file; }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  grid-area: NAV; }
+
+.app {
+  grid-area: App; }
+
+.link-2 {
+  grid-area: MAP; }
+
+.link-map, .link-file {
+  position: fixed;
+  top: 50vh;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000; }
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff; }
+
+.nav-header {
+  top: 0;
+  font-family: Palatino Linotype;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 86px;
+  color: #000000; }
+
+.nav .nav-header {
+  margin-left: auto;
+  margin-right: auto; }
+
+.nav .nav-btn {
+  margin-left: auto;
+  margin-right: 60px; }
+
+.nav-btn {
+  width: 176px;
+  height: 50px;
+  background: #c78555;
+  border: none;
+  border-radius: 2px; }
+
+.link-map {
+  transform: rotate(90deg); }
+
+.link-file {
+  left: 0;
+  transform: rotate(-90deg); }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff; }
+
+.app h2 {
+  padding-top: 90px;
+  padding-bottom: 20px; }
+
+.app p {
+  padding-bottom: 28px; }
+
+.content {
+  width: 850px; }
+
+.img-desc {
+  position: relative;
+  top: 300px;
+  width: 270px;
+  text-align: left; }
+
+.img-desc h3 {
+  padding-bottom: 15px; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* set scrollbar space to 5px*/ }
+
+/* show position indicator in background color */
+::-webkit-scrollbar-thumb {
+  background: red; }
+

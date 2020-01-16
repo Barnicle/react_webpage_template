@@ -1,4 +1,21 @@
+
+
 .app {
   display: flex;
-  max-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+.app h2{
+  @extend %headers;
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+.app p{
+  @extend %p-setup;
+  padding-bottom: 28px;
+}
+
+.content{
+  width: 850px;
 }

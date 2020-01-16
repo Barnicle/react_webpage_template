@@ -2,6 +2,7 @@ $header-font: Gotham pro;
 $main-font: PT sarif;
 $bg_color: #2f2e2d;
 $btn_color: #c78555;
+
 %headers {
   font-family: $header-font;
   font-style: normal;
@@ -9,7 +10,6 @@ $btn_color: #c78555;
   font-size: 40px;
   line-height: 60px;
   text-transform: uppercase;
-  color: #ffffff;
 }
 %p-setup {
   font-family: $main-font;
@@ -17,7 +17,6 @@ $btn_color: #c78555;
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
-  color: #ffffff;
 }
 
 * {

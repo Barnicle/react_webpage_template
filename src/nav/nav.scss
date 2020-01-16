@@ -1,64 +1,59 @@
-@import "../styles/variables";
-@import "../router/router.scss";
 %links {
+  position: fixed;
+  top: 50vh;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+  text-decoration: none;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #000000;
 }
 // NAV CLASSES
 .nav {
-  display: flex;
-
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
   background: #ffffff;
 }
 
 .nav-header {
-  // position: absolute;
-  left: 43.07%;
-  right: 43.02%;
-  top: 0%;
-  bottom: 97.86%;
+  top: 0;
   font-family: Palatino Linotype;
   font-style: normal;
   font-weight: normal;
   font-size: 64px;
   line-height: 86px;
-
   color: #000000;
 }
+.nav .nav-header{
+margin-left: auto;
+margin-right: auto;
+}
+.nav .nav-btn{
+  margin-left: auto;
+  margin-right: 60px;
+}
 .nav-btn {
-  // position: absolute;
   width: 176px;
   height: 50px;
-  right: 60px;
-  top: 15px;
+  // margin-right: 60px;
   background: #c78555;
   border: none;
   border-radius: 2px;
 }
 
-// LINKS TO FILES AND MAP
-// .link-map {
-//   position: absolute;
-//   width: 129px;
-//   height: 16px;
-//   left: 95vw;
-//   top: 432px;
-//   @extend %links;
-//   transform: rotate(90deg);
-// }
+//LINKS TO FILES AND MAP
+.link-map {
+  @extend %links;
+  transform: rotate(90deg);
+}
 
-// .link-file {
-//   position: absolute;
-//   width: 50px;
-//   height: 16px;
-//   left: 1vw;
-//   top: 432px;
-//   @extend %links;
-//   transform: rotate(-90deg);
-// }
+.link-file {
+  left: 0;
+  @extend %links;
+  transform: rotate(-90deg);
+}

@@ -1,6 +1,6 @@
 const path = require("path");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
 module.exports = {
@@ -22,8 +22,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html"
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     })
-    // new ExtractTextPlugin("style.css")
   ],
   module: {
     rules: [
@@ -33,9 +38,20 @@ module.exports = {
         loader: "babel-loader"
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+        test: /\.(png|jpg|gif)$/,
         exclude: /node_modules/,
-        use: ["file-loader?name=[name].[ext]"] // ?name=[name].[ext] is only necessary to preserve the original file name
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].[ext]",
+              context: path.resolve(__dirname, "src/images/"),
+              outputPath: "dist/",
+              publicPath: "../",
+              useRelativePaths: true
+            }
+          }
+        ]
       },
       {
         test: /\.(css)$/,
@@ -43,9 +59,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        // use: ExtractTextPlugin.extract({ //extract-text-webpack-plugin@next Скачай это
-        //    fallback: "style-loader",
-        loader: ["style-loader", "css-loader", "sass-loader"]
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: (resourcePath, context) => {
+                return path.relative(path.dirname(resourcePath), context) + "/";
+              }
+            }
+          },
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   }
