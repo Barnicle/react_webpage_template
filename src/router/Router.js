@@ -4,7 +4,7 @@ import NotFound from "../not-found";
 import App from "../app";
 import Nav from "../nav";
 import "../styles/base.scss";
-import Item from "../images/item.png";
+// import Item from "../images/item.png";
 
 const Router = () => {
   return (
@@ -19,8 +19,7 @@ const Router = () => {
           </a>
         </div>
 
-        <div className="appbar">
-          {/* <img src={Item}></img> */}
+        <div className="app">
 
           <Switch>
             <Route exact path="/" component={App} />

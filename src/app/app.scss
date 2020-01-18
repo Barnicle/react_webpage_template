@@ -11,7 +11,7 @@
   padding-top: 90px;
   padding-bottom: 20px;
 }
-.app p{
+.section-1 p{
   @extend %p-setup;
   padding-bottom: 28px;
 }
@@ -19,3 +19,11 @@
 .content{
   width: 850px;
 }
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+

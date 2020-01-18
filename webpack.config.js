@@ -13,7 +13,7 @@ module.exports = {
   },
   devServer: {
     contentBase: "./dist",
-    port: 3001,
+    port: 3000,
     hot: true,
     open: true,
     clientLogLevel: "silent",
@@ -26,7 +26,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name].css",
+      filename: "main-[hash:8].css",
       chunkFilename: "[id].css"
     })
   ],
@@ -47,7 +47,6 @@ module.exports = {
               name: "[path][name].[ext]",
               context: path.resolve(__dirname, "src/images/"),
               outputPath: "dist/",
-              publicPath: "../",
               useRelativePaths: true
             }
           }
@@ -55,19 +54,20 @@ module.exports = {
       },
       {
         test: /\.(css)$/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: (resourcePath, context) => {
-                return path.relative(path.dirname(resourcePath), context) + "/";
-              }
-            }
-          },
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          //   options: {
+          //     publicPath: (resourcePath, context) => {
+          //       return path.relative(path.dirname(resourcePath), context) + "/";
+          //     }
+          //   }
+          // },
+          "style-loader",
           "css-loader",
           "sass-loader"
         ]

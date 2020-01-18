@@ -43,7 +43,7 @@
   grid-area: MAP; }
 
 .appbar {
-  background: url(../item.png); }
+  background: url(..\../dist/item.png); }
 
 .link-map, .link-file {
   position: fixed;

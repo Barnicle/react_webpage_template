@@ -14,15 +14,18 @@
   grid-area: file;
 }
 .navbar {
+  z-index: 100;
   position: sticky;
   top: 0;
   height: 80px;
   grid-area: NAV;
 }
+
+
 .app {
   @extend %shared-display;
-  // background: $bg_color;
-   grid-area: App;
+  background: url(#{$path}/background.png) $bg_color;
+  grid-area: App;
 }
 .link-2 {
   @extend %shared-display;
@@ -30,5 +33,6 @@
 }
 
 .appbar{
-background: url("../images/item.png");
+  z-index: 1;
+
 }
