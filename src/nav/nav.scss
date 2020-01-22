@@ -11,13 +11,16 @@
   text-transform: uppercase;
   color: #000000;
 }
+
+
 // NAV CLASSES
 .nav {
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 align-items: center;
-  background: #ffffff;
+background: #ffffff;
+margin-bottom: 10px;
 }
 
 .nav-header {
@@ -29,21 +32,20 @@ align-items: center;
   line-height: 86px;
   color: #000000;
 }
-.nav .nav-header{
+.nav > .nav-header{
 margin-left: auto;
-margin-right: auto;
+margin-right: 60px;
 }
-.nav .nav-btn{
+.nav > .nav-btn{
   margin-left: auto;
   margin-right: 60px;
 }
+
 .nav-btn {
   width: 176px;
   height: 50px;
-  // margin-right: 60px;
-  background: #c78555;
-  border: none;
-  border-radius: 2px;
+  margin-right: 60px;
+@extend %btn;
 }
 
 //LINKS TO FILES AND MAP
@@ -57,3 +59,19 @@ margin-right: auto;
   @extend %links;
   transform: rotate(-90deg);
 }
+
+// @media (max-width: 475px){
+//   .nav{
+//     width: 100vw;
+//   }
+//   .nav-btn{
+//   width: 100px;
+//   }
+//   .nav-header{
+//     font-size: 2rem;
+//   }
+//   .nav > .nav-btn {
+// margin-right: auto;
+//   }
+  
+// }

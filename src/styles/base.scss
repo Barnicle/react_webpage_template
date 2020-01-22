@@ -1,17 +1,10 @@
 @import './variables';
 @import '../router/router';
+@import '../form-page/form-page';
 @import '../nav/nav';
 @import '../app/app';
 @import '../store-item/store-item';
-::-webkit-scrollbar {
-    width: 5px;  /* set scrollbar space to 5px*/
-    // border-radius: 50%;
-}
-/* show position indicator in background color */
-::-webkit-scrollbar-thumb {
-    // background: $bg_color;
-    background: red;
 
+html{
+    width: 100%;
 }
-
-// $path: '/images/';

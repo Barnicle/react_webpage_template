@@ -11,13 +11,13 @@
   padding-top: 90px;
   padding-bottom: 20px;
 }
-.section-1 p{
+.section-1 > p{
   @extend %p-setup;
   padding-bottom: 28px;
 }
 
 .content{
-  width: 850px;
+  max-width: 80%;
 }
 
 .items{
@@ -27,3 +27,8 @@
   justify-content: space-between;
 }
 
+// @media screen and (max-width: 475px){
+//   .app{
+//     justify-content: center;
+//   }
+// }

@@ -4,7 +4,8 @@ import NotFound from "../not-found";
 import App from "../app";
 import Nav from "../nav";
 import "../styles/base.scss";
-// import Item from "../images/item.png";
+import Form from "../form-page";
+
 
 const Router = () => {
   return (
@@ -13,24 +14,23 @@ const Router = () => {
         <div className="navbar">
           <Nav />
         </div>
-        <div className="link-1">
+        {/* <div className="link-1">
           <a className="link-file" href="#files">
             Файлы
           </a>
-        </div>
-
+        </div> */}
         <div className="app">
-
           <Switch>
             <Route exact path="/" component={App} />
+            <Route path="/form/" component={Form} />
             <Route component={NotFound} />
           </Switch>
         </div>
-        <div className="link-2">
+        {/* <div className="link-2">
           <a className="link-map" href="#map">
             Местоположение
           </a>
-        </div>
+        </div> */}
       </div>
     </BrowserRouter>
   );

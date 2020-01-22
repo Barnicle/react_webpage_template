@@ -11,6 +11,11 @@ $path: '../images';
   line-height: 60px;
   text-transform: uppercase;
 }
+%btn{
+  background: #c78555;
+  border: none;
+  border-radius: 2px;
+}
 %p-setup {
   font-family: $main-font;
   font-style: normal;
