@@ -12,15 +12,15 @@
   color: #000000;
 }
 
-
 // NAV CLASSES
 .nav {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-background: #ffffff;
-margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  margin-bottom: 10px;
 }
 
 .nav-header {
@@ -31,47 +31,40 @@ margin-bottom: 10px;
   font-size: 64px;
   line-height: 86px;
   color: #000000;
-}
-.nav > .nav-header{
-margin-left: auto;
-margin-right: 60px;
-}
-.nav > .nav-btn{
-  margin-left: auto;
-  margin-right: 60px;
+  margin-right: auto;
+  margin-left: 40vw;
 }
 
 .nav-btn {
   width: 176px;
   height: 50px;
+  margin-left: auto;
   margin-right: 60px;
-@extend %btn;
+  @extend %btn;
 }
 
 //LINKS TO FILES AND MAP
 .link-map {
   @extend %links;
+  right: -40px;
   transform: rotate(90deg);
 }
-
 .link-file {
-  left: 0;
   @extend %links;
+  left: 0;
   transform: rotate(-90deg);
 }
-
-// @media (max-width: 475px){
-//   .nav{
-//     width: 100vw;
-//   }
-//   .nav-btn{
-//   width: 100px;
-//   }
-//   .nav-header{
-//     font-size: 2rem;
-//   }
-//   .nav > .nav-btn {
-// margin-right: auto;
-//   }
-  
-// }
+@media (max-width: 818px) {
+  .nav-btn {
+    margin-right: auto;
+  }
+  .nav-header {
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .link-map,
+  .link-file {
+    display: none;
+  }
+}

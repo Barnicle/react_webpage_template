@@ -2,7 +2,7 @@ $header-font: Gotham pro;
 $main-font: PT sarif;
 $bg_color: #2f2e2d;
 $btn_color: #c78555;
-$path: '../images';
+$path: "../images";
 %headers {
   font-family: $header-font;
   font-style: normal;
@@ -11,7 +11,8 @@ $path: '../images';
   line-height: 60px;
   text-transform: uppercase;
 }
-%btn{
+
+%btn {
   background: #c78555;
   border: none;
   border-radius: 2px;
@@ -20,10 +21,15 @@ $path: '../images';
   font-family: $main-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
 }
 
 * {
   margin: 0;
+}
+@media screen and (max-width: 475px) {
+  %headers {
+    font-size: 58px;
+  }
 }

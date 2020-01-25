@@ -6,7 +6,6 @@ import Nav from "../nav";
 import "../styles/base.scss";
 import Form from "../form-page";
 
-
 const Router = () => {
   return (
     <BrowserRouter>
@@ -14,11 +13,7 @@ const Router = () => {
         <div className="navbar">
           <Nav />
         </div>
-        {/* <div className="link-1">
-          <a className="link-file" href="#files">
-            Файлы
-          </a>
-        </div> */}
+
         <div className="app">
           <Switch>
             <Route exact path="/" component={App} />

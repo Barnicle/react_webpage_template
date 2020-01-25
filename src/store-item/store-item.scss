@@ -1,5 +1,4 @@
-
-.img-container{
+.img-container {
   position: relative;
   background: url(#{$path}/item.png) no-repeat;
   background-size: cover;
@@ -10,43 +9,44 @@
   z-index: 1;
   margin-top: 20px;
 }
-.img-container:hover::before{
-  content: '';
+
+.img-container:hover::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   border-radius: 10px;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
-.img-desc{
-  text-align:left;
+.img-desc {
+  text-align: left;
   margin: 48px 20px 20px 20px;
   width: 230px;
   z-index: 3;
 }
-.img-desc > h3{
+.img-desc > h3 {
   font-family: Gotham Pro;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
   padding-bottom: 15px;
-
 }
-.img-desc > p{
+.img-desc > p {
   font-family: PT Serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 28px;
 }
-
-// @media (max-width: 475px){
-//   .img-container{
-//     width: 270px;
-//     height: 220px;
-//   }
-// }
+@media (min-width: 1025px) {
+  .desc-info {
+    display: none;
+  }
+  .img-container:hover .desc-info {
+    display: flex;
+  }
+}

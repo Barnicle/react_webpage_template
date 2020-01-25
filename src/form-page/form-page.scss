@@ -1,59 +1,82 @@
-
-.form-container{
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  margin-bottom: 20px;
 }
 
-.form-container input[type='text']{
+.form-container input[type="text"] {
   margin-bottom: 21px;
   width: 300px;
   height: 50px;
-  
 }
-.form-container input[type='text']::placeholder{
+.form-container input[type="text"]::placeholder {
   padding-left: 18px;
 }
-.form-container button[type='submit']{
-width: 300px;
-height: 50px;
-margin-bottom: 46.5px;
-font-family: Open Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 16px;
-letter-spacing: 0.05em;
-text-transform: uppercase;
-color: #FFFFFF;
+.form-container button[type="submit"] {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 46.5px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-.form-container > h2{
+.form-container > h2 {
   text-align: center;
 }
-.form-btn{
+.form-btn {
   background: #c78555;
   border: none;
   border-radius: 2px;
 }
-.checkbox{
+.checkbox {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
-
 }
-.checkbox > input[type='checkbox']{
+.checkbox > input[type="checkbox"] {
   margin-right: 13px;
 }
 
-.info{
-display: block;
-width: 70vw;
-font-family: Montserrat;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 18px;
+.info {
+  display: flex;
+  width: 70vw;
+  font-family: Montserrat; //найти шрифт
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+}
+@media (max-width: 475px) {
+  .form-container {
+    height: fit-content;
+  }
+}
+@media (min-width: 2560px) {
+  .form-container h2 {
+    font-size: 5rem;
+    margin-bottom: 50px;
+  }
+  .form-container p {
+    font-size: 2rem;
+  }
+  .form-container input[type="text"] {
+    width: 500px;
+  }
+  .form-container button[type="submit"] {
+    width: 500px;
+  }
+  .info {
+    font-size: 2rem;
+    line-height: 28px;
+  }
 }

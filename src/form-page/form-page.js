@@ -7,7 +7,7 @@ export default class Form extends Component {
   render() {
     const data = this.state;
     return (
-      <div className="form-container">
+      <form className="form-container">
         <h2>Lorem ipsum dolor</h2>
         <input type="text" placeholder="Ваш телефон" />
         <button className="form-btn" type="submit">
@@ -23,7 +23,7 @@ export default class Form extends Component {
           consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod
         </div>
-      </div>
+      </form>
     );
   }
 }
