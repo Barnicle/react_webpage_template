@@ -1,10 +1,11 @@
-@import './variables';
-@import '../router/router';
-@import '../form-page/form-page';
-@import '../nav/nav';
-@import '../app/app';
-@import '../store-item/store-item';
+@import "./variables";
+@import "../router/router";
+@import "../form-page/form-page";
+@import "../nav/nav";
+@import "../app/app";
+@import "../store-item/store-item";
+@import "../file-item/file-item";
 
-html{
-    width: 100%;
+html {
+  width: 100%;
 }

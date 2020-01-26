@@ -13,7 +13,6 @@ const Router = () => {
         <div className="navbar">
           <Nav />
         </div>
-
         <div className="app">
           <Switch>
             <Route exact path="/" component={App} />
@@ -21,11 +20,6 @@ const Router = () => {
             <Route component={NotFound} />
           </Switch>
         </div>
-        {/* <div className="link-2">
-          <a className="link-map" href="#map">
-            Местоположение
-          </a>
-        </div> */}
       </div>
     </BrowserRouter>
   );

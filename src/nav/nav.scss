@@ -46,7 +46,7 @@
 //LINKS TO FILES AND MAP
 .link-map {
   @extend %links;
-  right: -40px;
+  right: -45px;
   transform: rotate(90deg);
 }
 .link-file {
@@ -54,6 +54,7 @@
   left: 0;
   transform: rotate(-90deg);
 }
+
 @media (max-width: 818px) {
   .nav-btn {
     margin-right: auto;
@@ -62,6 +63,7 @@
     margin-left: auto;
   }
 }
+
 @media (max-width: 768px) {
   .link-map,
   .link-file {

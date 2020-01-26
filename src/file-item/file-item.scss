@@ -1,0 +1,59 @@
+@import "../styles/variables";
+
+%file-item-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.file-item {
+  @extend %file-item-display;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.file-item h4 {
+  @extend %file-item-header-style;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.file-item p {
+  @extend %file-item-p-style;
+  font-weight: 300;
+}
+.file-info {
+  @extend %file-item-display;
+}
+.file-info > img {
+  margin-left: auto;
+}
+
+.file-item-hr {
+  border: 1px solid rgba(156, 74, 74, 0.2);
+}
+
+.file-item-download-icon {
+  position: relative;
+  height: 22.2px;
+  width: 24px;
+}
+.file-item-download-icon::after {
+  content: url(../images/download-icon/icon_2.png); //arrow icon
+  position: absolute;
+  width: 10.12px;
+  height: 16.99px;
+  top: -10.74px;
+  left: 5.9px;
+  bottom: -5.26px;
+}
+
+//animation for download icon
+.file-item-download-icon:hover::after {
+  animation: arrow_moving 0.4s ease;
+  animation-fill-mode: both;
+}
+@keyframes arrow_moving {
+  to {
+    top: -5.2px;
+  }
+}

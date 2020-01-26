@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { YMaps, Map } from "react-yandex-maps";
 import StoreItem from "../store-item";
-
+import FileItem from "../file-item";
 export default class App extends Component {
   render() {
+    const map = Map;
     return (
-      <div className="content">
+      <main className="main">
         <div>
           <a className="link-file" href="#files">
             Файлы
@@ -50,15 +52,24 @@ export default class App extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           </p>
+          <YMaps className="map-container">
+            <Map className="map" defaultState={{ center: [59.93, 30.3], zoom: 10 }} />
+          </YMaps>
         </section>
         <section className="files" id="files">
           <h2>Файлы</h2>
-          <ul>
-            <li>Все</li>
-            <li>TAB 1</li>
-            <li>TAB 2</li>
-            <li>TAB 3</li>
-          </ul>
+          <div className="files-nav-container">
+            <ul className="files-nav">
+              <li>Все</li>
+              <li>TAB 1</li>
+              <li>TAB 2</li>
+              <li>TAB 3</li>
+            </ul>
+            <hr className="file-item-hr" />
+          </div>
+          <FileItem />
+          <FileItem />
+          <FileItem />
 
           <div></div>
         </section>
@@ -68,7 +79,7 @@ export default class App extends Component {
           consectetur adipiscing elit, sed do eiusmod Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod
         </p>
-      </div>
+      </main>
     );
   }
 }

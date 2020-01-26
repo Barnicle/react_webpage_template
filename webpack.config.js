@@ -24,8 +24,6 @@ module.exports = {
       template: "./index.html"
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: "main-[hash:8].css",
       chunkFilename: "[id].css"
     })

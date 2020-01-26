@@ -25,6 +25,20 @@ $path: "../images";
   line-height: 28px;
 }
 
+%file-item-p-style {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+}
+%file-item-header-style {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
 * {
   margin: 0;
 }
