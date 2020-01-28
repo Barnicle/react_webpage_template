@@ -34,7 +34,7 @@ export default class Form extends Component {
     let valid = "undef";
     const data = this.state;
     return (
-      <form className="form-container">
+      <form action="http://localhost:3000/" className="form-container">
         <h2>Lorem ipsum dolor</h2>
         <input
           className={data.valid}
