@@ -1,12 +1,12 @@
 @import "./variables";
-@import "../router/router";
-@import "../form-page/form-page";
 @import "../nav/nav";
+@import "../router/router";
 @import "../app/app";
+@import "../form-page/form-page";
 @import "../store-item/store-item";
 @import "../file-item/file-item";
-
-html {
+* {
   font-size: 10px;
-  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }

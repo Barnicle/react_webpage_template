@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { YMaps, Map } from "react-yandex-maps";
 import StoreItem from "../store-item";
 import FileItem from "../file-item";
+import "../styles/variables.scss";
 export default class App extends Component {
   render() {
     return (

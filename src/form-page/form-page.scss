@@ -6,27 +6,37 @@
   height: 100vh;
   margin-bottom: 20px;
 }
-
+.valid {
+  border: 2px solid rgb(2, 228, 2);
+  box-shadow: 0px 0px 10px rgb(2, 228, 2);
+  border-radius: 2px;
+}
+.invalid {
+  border: 2px solid rgb(255, 0, 0);
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+  border-radius: 2px;
+}
 .form-container input[type="text"] {
   margin-bottom: 21px;
-  width: 300px;
-  height: 50px;
-}
-.form-container input[type="text"]::placeholder {
   padding-left: 18px;
-}
-.form-container button[type="submit"] {
   width: 300px;
   height: 50px;
+}
+
+.form-container button[type="submit"] {
+  width: 30rem;
+  height: 5rem;
   margin-bottom: 46.5px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(199, 133, 85, 0.2);
+  border-radius: 2px;
 }
 .form-container > h2 {
   text-align: center;
@@ -43,6 +53,9 @@
   justify-content: center;
   margin-bottom: 100px;
 }
+.checkbox p {
+  font-size: 1.5rem;
+}
 .checkbox > input[type="checkbox"] {
   margin-right: 13px;
 }
@@ -53,7 +66,7 @@
   font-family: Montserrat; //найти шрифт
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 18px;
 }
 @media (max-width: 475px) {

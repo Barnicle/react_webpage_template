@@ -41,6 +41,7 @@
   margin-left: auto;
   margin-right: 60px;
   @extend %btn;
+  @extend %p-setup;
 }
 
 //LINKS TO FILES AND MAP
