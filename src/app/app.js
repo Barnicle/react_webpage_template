@@ -4,7 +4,6 @@ import StoreItem from "../store-item";
 import FileItem from "../file-item";
 export default class App extends Component {
   render() {
-    const map = Map;
     return (
       <main className="main">
         <div>
@@ -29,7 +28,7 @@ export default class App extends Component {
           </p>
         </section>
         <section className="items">
-          {/* <h2>Lorem ipsum dolor sit</h2> */}
+          <h2>Lorem ipsum dolor sit</h2>
           <div className="store-items">
             <StoreItem />
             <StoreItem />
@@ -52,9 +51,9 @@ export default class App extends Component {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Lorem ipsum
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           </p>
-          <YMaps className="map-container">
+          {/* <YMaps className="map-container">
             <Map className="map" defaultState={{ center: [59.93, 30.3], zoom: 10 }} />
-          </YMaps>
+          </YMaps> */}
         </section>
         <section className="files" id="files">
           <h2>Файлы</h2>

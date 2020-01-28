@@ -7,8 +7,8 @@ $path: "../images";
   font-family: $header-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 4rem;
+  line-height: 6rem;
   text-transform: uppercase;
 }
 
@@ -21,29 +21,29 @@ $path: "../images";
   font-family: $main-font;
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 %file-item-p-style {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
 }
 %file-item-header-style {
   font-family: "Open Sans";
   font-weight: 600;
   font-style: normal;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
 }
 * {
   margin: 0;
 }
 @media screen and (max-width: 475px) {
   %headers {
-    font-size: 58px;
+    font-size: 1.5rem;
   }
 }
