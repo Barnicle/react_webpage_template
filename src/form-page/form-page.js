@@ -13,32 +13,32 @@ export default class Form extends Component {
     e.target.value != "" ? undefined : (e.target.value = prefix); //если форма пустая, то если её "активировать" появится строчка +7
   };
 
-  //on Blur validate phone number
+  //когда становится неактивно проверяет телефон на вреный формат, меняет класс инпута согласно этому, если все ок записывает в стейт номер телефона
   handleBlur = e => {
     const number = e.target.value;
-    const validation = /^\+?([0-9]{11})$/;
+    const validation = /\+7?([0-9]{11})$/;
+
     if (number.match(validation))
       this.setState({
         phone_number: number,
         valid: "valid"
       });
     else {
-      // alert("Не верно введен телефонный номер");
       this.setState({
         valid: "invalid"
       });
     }
   };
 
-  handleSubmit = () => {
+  handleSubmit = e => {
     if (this.state.valid === "valid") return true;
     else {
-      // alert("Введите телефонный номер и примите условия соглашения!");
       return false;
     }
   };
   render() {
     const data = this.state;
+
     return (
       <form action="http://localhost:3000/" onSubmit={this.handleSubmit} className="form-container">
         <h2>Lorem ipsum dolor</h2>
@@ -48,7 +48,7 @@ export default class Form extends Component {
           type="text"
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
-          pattern="\+7?[0-9]{11}"
+          pattern="\+7?[0-9]{11}" //проверка на валидность
           placeholder="Ваш телефон"
         />
         <button className="form-btn" type="submit">

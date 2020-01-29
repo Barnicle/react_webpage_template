@@ -1,2 +1,13 @@
+@import "../styles/variables";
+
 .notfound {
+  height: 80vh;
+  text-align: center;
+}
+.notfound p {
+  @extend %p-setup;
+  font-size: 5rem;
+  margin-top: 50%;
+}
+@media (max-width: 475px) {
 }
