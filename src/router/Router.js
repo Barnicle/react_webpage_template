@@ -17,7 +17,7 @@ const Router = () => {
           <Switch>
             <Route exact path="/" component={App} />
             <Route path="/form/" component={Form} />
-            {/* <Route component={NotFound} /> */}
+            <Route component={NotFound} />
           </Switch>
         </div>
       </div>

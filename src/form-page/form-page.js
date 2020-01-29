@@ -1,54 +1,61 @@
 import React, { Component } from "react";
 import "./form-page.scss";
-const state = {
-  phone_number: "123",
-  valid: "undef"
-};
 export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      phone_number: "123",
+      phone_number: "",
       valid: "undef"
     };
   }
-  onActive = e => {
-    let number = "+7";
-    e.target.value = number;
+  handleFocus = e => {
+    const prefix = "+7";
+    e.target.value != "" ? undefined : (e.target.value = prefix); //если форма пустая, то если её "активировать" появится строчка +7
   };
 
   //on Blur validate phone number
-  onBlur = e => {
+  handleBlur = e => {
     const number = e.target.value;
-    const validation = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-    if (number === validation)
+    const validation = /^\+?([0-9]{11})$/;
+    if (number.match(validation))
       this.setState({
+        phone_number: number,
         valid: "valid"
       });
-    else
+    else {
+      // alert("Не верно введен телефонный номер");
       this.setState({
         valid: "invalid"
       });
+    }
+  };
+
+  handleSubmit = () => {
+    if (this.state.valid === "valid") return true;
+    else {
+      // alert("Введите телефонный номер и примите условия соглашения!");
+      return false;
+    }
   };
   render() {
-    let valid = "undef";
     const data = this.state;
     return (
-      <form action="http://localhost:3000/" className="form-container">
+      <form action="http://localhost:3000/" onSubmit={this.handleSubmit} className="form-container">
         <h2>Lorem ipsum dolor</h2>
         <input
           className={data.valid}
           required
           type="text"
-          onClick={this.onActive}
-          onBlur={this.onBlur}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
+          pattern="\+7?[0-9]{11}"
           placeholder="Ваш телефон"
         />
         <button className="form-btn" type="submit">
           Отправить
         </button>
         <div className="checkbox">
-          <input className="" type="checkbox" />
+          <input className="" type="checkbox" required />
           <p>Я принимаю условия</p>
         </div>
         <div className="info">
